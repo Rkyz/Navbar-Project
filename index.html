@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar-ul">
+                <div class="fixed-navbar">
+                    <div class="scroll-navbar">
+                        <div class="header">
+                            <img src="Logo.png" alt="" srcset="" class="logo"/>
+                            <div id="myToggle">
+                                <button
+                                    class="navbar-toggle"
+                                    id="dropdown-btn"
+                                    aria-label="Menu"
+                                    onclick="myFunction()"
+                                    type="button">
+                                    <span class="navbar-toggle-icon"></span>
+                                </button>
+                            </div>
+                            <nav id="myNavbar" class="navbar">
+                                <ul class="show">
+                                    <li>
+                                        <button id="dropdown-btn">Apa itu Robopark</button>
+                                        <ul id="dropdown-content" class="ul-button-1">
+                                            <li>
+                                                <a href="">1</a>
+                                            </li>
+                                            <li>
+                                                <a href="">2</a>
+                                            </li>
+                                            <li>
+                                                <a href="">3</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <button id="dropdown-btn">Tentang Robopark</button>
+                                        <ul id="dropdown-content" class="ul-button-2">
+                                            <li>
+                                                <a href="">1</a>
+                                            </li>
+                                            <li>
+                                                <a href="">2</a>
+                                            </li>
+                                            <li>
+                                                <a href="">3</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <button id="dropdown-btn">Rencana Kunjuangan</button>
+                                        <ul id="dropdown-content" class="ul-button-3">
+                                            <li>
+                                                <a href="">1</a>
+                                            </li>
+                                            <li>
+                                                <a href="">2</a>
+                                            </li>
+                                            <li>
+                                                <a href="">3</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="" class="btn-register">Register</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+        function myFunction() {
+          var x = document.getElementById("myToggle");
+          if (x.className.indexOf("show") == -1) {
+            x.className += " show";
+          } else {
+            x.className = x.className.replace("show", "");
+          }
+        }
+        </script>
+        <script>
+          const burger = document.querySelector('.burger');
+          const menu = document.querySelector('#'+burger.dataset.target);
+          burger.addEventListener('click', () => {
+            burger.classList.toggle('is-active');
+            menu.classList.toggle('is-active');
+          });
+        </script>
+        
+        <script src="navbar.js"></script>
+        <script src="main.js"></script>
+        <script src="toggle.js"></script>
+        <script src="dropdown.js"></script>
+    </body>
+</html>
